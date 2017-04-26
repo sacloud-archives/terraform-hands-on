@@ -1,0 +1,234 @@
+version: '2'
+
+services:
+  front-nginx:
+    image: jwilder/nginx-proxy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  drupal01:
+    build: &base_image
+      context: docker/drupal-base
+    env_file: .env
+    environment:
+      - DRUPAL_HOSTNAME=drupal01
+      - VIRTUAL_HOST=host01.drupal.example.com
+    volumes:
+      - drupal01:/var/www/html/sites
+
+  drupal02:
+    build: *base_image
+    env_file: .env
+    environment:
+      - DRUPAL_HOSTNAME=drupal02
+      - VIRTUAL_HOST=host02.drupal.example.com
+    volumes:
+      - drupal02:/var/www/html/sites
+
+#  drupal03:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal03
+#      - VIRTUAL_HOST=host03.drupal.example.com
+#    volumes:
+#      - drupal03:/var/www/html/sites
+#
+#  drupal04:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal04
+#      - VIRTUAL_HOST=host04.drupal.example.com
+#    volumes:
+#      - drupal04:/var/www/html/sites
+#
+#  drupal05:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal05
+#      - VIRTUAL_HOST=host05.drupal.example.com
+#    volumes:
+#      - drupal05:/var/www/html/sites
+#
+#  drupal06:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal06
+#      - VIRTUAL_HOST=host06.drupal.example.com
+#    volumes:
+#      - drupal06:/var/www/html/sites
+#
+#  drupal07:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal07
+#      - VIRTUAL_HOST=host07.drupal.example.com
+#    volumes:
+#      - drupal07:/var/www/html/sites
+#
+#  drupal08:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal08
+#      - VIRTUAL_HOST=host08.drupal.example.com
+#    volumes:
+#      - drupal08:/var/www/html/sites
+#
+#  drupal09:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal09
+#      - VIRTUAL_HOST=host09.drupal.example.com
+#    volumes:
+#      - drupal09:/var/www/html/sites
+#
+#  drupal10:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal10
+#      - VIRTUAL_HOST=host10.drupal.example.com
+#    volumes:
+#      - drupal10:/var/www/html/sites
+#
+#  drupal11:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal11
+#      - VIRTUAL_HOST=host11.drupal.example.com
+#    volumes:
+#      - drupal11:/var/www/html/sites
+#
+#
+#  drupal12:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal12
+#      - VIRTUAL_HOST=host12.drupal.example.com
+#    volumes:
+#      - drupal12:/var/www/html/sites
+#
+#  drupal13:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal13
+#      - VIRTUAL_HOST=host13.drupal.example.com
+#    volumes:
+#      - drupal13:/var/www/html/sites
+#
+#  drupal14:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal14
+#      - VIRTUAL_HOST=host14.drupal.example.com
+#    volumes:
+#      - drupal14:/var/www/html/sites
+#
+#  drupal15:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal15
+#      - VIRTUAL_HOST=host15.drupal.example.com
+#    volumes:
+#      - drupal15:/var/www/html/sites
+#
+#  drupal16:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal16
+#      - VIRTUAL_HOST=host16.drupal.example.com
+#    volumes:
+#      - drupal16:/var/www/html/sites
+#
+#  drupal17:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal17
+#      - VIRTUAL_HOST=host17.drupal.example.com
+#    volumes:
+#      - drupal17:/var/www/html/sites
+#
+#  drupal18:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal18
+#      - VIRTUAL_HOST=host18.drupal.example.com
+#    volumes:
+#      - drupal18:/var/www/html/sites
+#
+#  drupal19:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal19
+#      - VIRTUAL_HOST=host19.drupal.example.com
+#    volumes:
+#      - drupal19:/var/www/html/sites
+#
+#  drupal20:
+#    build: *base_image
+#    env_file: .env
+#    environment:
+#      - DRUPAL_HOSTNAME=drupal20
+#      - VIRTUAL_HOST=host20.drupal.example.com
+#    volumes:
+#      - drupal20:/var/www/html/sites
+
+
+volumes:
+  drupal01:
+    driver: local
+  drupal02:
+    driver: local
+  drupal03:
+    driver: local
+  drupal04:
+    driver: local
+  drupal05:
+    driver: local
+  drupal06:
+    driver: local
+  drupal07:
+    driver: local
+  drupal08:
+    driver: local
+  drupal09:
+    driver: local
+  drupal10:
+    driver: local
+  drupal11:
+    driver: local
+  drupal12:
+    driver: local
+  drupal13:
+    driver: local
+  drupal14:
+    driver: local
+  drupal15:
+    driver: local
+  drupal16:
+    driver: local
+  drupal17:
+    driver: local
+  drupal18:
+    driver: local
+  drupal19:
+    driver: local
+  drupal20:
+    driver: local
