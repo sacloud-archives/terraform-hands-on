@@ -3,7 +3,7 @@
 set -e
 set -x
 
-TERRAFORM_VERSION=0.9.3
+TERRAFORM_VERSION=0.9.4
 TERRAFORM_SAKURA_VERSION=0.8.1
 
 mkdir -p ~/bin/
@@ -16,3 +16,8 @@ chmod +x terraform
 # provider sakuracloud
 curl -L https://github.com/yamamoto-febc/terraform-provider-sakuracloud/releases/download/v${TERRAFORM_SAKURA_VERSION}/terraform-provider-sakuracloud_linux-amd64.zip | funzip > terraform-provider-sakuracloud
 chmod +x terraform-provider-sakuracloud
+
+# use Japanese with vim
+echo ':set encoding=utf-8' >~/.vimrc
+echo ':set fileencodings=iso-2022-jp,euc-jp,sjis,utf8' >>~/.vimrc
+
