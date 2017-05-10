@@ -35,7 +35,7 @@ resource sakuracloud_server "web_servers" {
     disks = ["${sakuracloud_disk.web_disks.*.id[count.index]}"]
     tags = ["@virtio-net-pci"]
     # 追加NIC(スイッチに接続)
-    additional_interfaces = ["${
+    additional_nics = ["${
         lookup(
             zipmap(
                 var.switch_zones,
@@ -48,7 +48,7 @@ resource sakuracloud_server "web_servers" {
     # プロビジョニング
     connection {
        user = "root"
-       host = "${self.base_nw_ipaddress}"
+       host = "${self.ipaddress}"
        private_key = "${file("~/.ssh/id_rsa")}"
     }
     # プライベートIP設定

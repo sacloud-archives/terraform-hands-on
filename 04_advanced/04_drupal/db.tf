@@ -17,9 +17,9 @@ resource "sakuracloud_database" "db" {
     backup_time = "00:00"
 
     switch_id = "${sakuracloud_internet.router.switch_id}"
-    ipaddress1 = "${sakuracloud_internet.router.nw_ipaddresses[0]}"
+    ipaddress1 = "${sakuracloud_internet.router.ipaddresses[0]}"
     nw_mask_len = "${sakuracloud_internet.router.nw_mask_len}"
-    default_route = "${sakuracloud_internet.router.nw_gateway}"
+    default_route = "${sakuracloud_internet.router.gateway}"
 
 }
 

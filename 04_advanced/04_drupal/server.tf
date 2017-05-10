@@ -36,7 +36,7 @@ resource "sakuracloud_server" "server01" {
     connection {
         user = "root"
         password = "${sakuracloud_disk.disk01.password}"
-        host = "${self.base_nw_ipaddress}"
+        host = "${self.ipaddress}"
     }
 
     # ファイル(ディレクトリごと)アップロード
@@ -75,5 +75,5 @@ resource "sakuracloud_server" "server01" {
 }
 
 output "server_ip" {
-    value = "${sakuracloud_server.server01.base_nw_ipaddress}"
+    value = "${sakuracloud_server.server01.ipaddress}"
 }

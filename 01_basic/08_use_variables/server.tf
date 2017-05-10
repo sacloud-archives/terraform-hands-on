@@ -14,7 +14,7 @@ resource sakuracloud_server "server" {
         # 接続関連設定
         connection {
             user = "root"
-            host = "${self.base_nw_ipaddress}"
+            host = "${self.ipaddress}"
             private_key = "${file(var.key_path["private_key"])}"
         }
 
@@ -61,5 +61,5 @@ resource sakuracloud_ssh_key "key" {
 
 # サーバのグローバルIPを表示するためのアウトプット定義
 output server_ip {
-    value = "${sakuracloud_server.server.base_nw_ipaddress}"
+    value = "${sakuracloud_server.server.ipaddress}"
 }

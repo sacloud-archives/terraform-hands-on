@@ -4,7 +4,7 @@ set -e
 set -x
 
 TERRAFORM_VERSION=0.9.4
-TERRAFORM_SAKURA_VERSION=0.8.1
+TERRAFORM_SAKURA_VERSION=0.9.0
 
 mkdir -p ~/bin/
 cd ~/bin/

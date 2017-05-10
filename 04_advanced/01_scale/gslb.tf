@@ -26,7 +26,7 @@ resource "sakuracloud_gslb" "gslb" {
 resource "sakuracloud_gslb_server" "gslb_servers" {
     count = "${var.server_count}"
     gslb_id = "${sakuracloud_gslb.gslb.id}"
-    ipaddress = "${sakuracloud_server.servers.*.base_nw_ipaddress[count.index]}"
+    ipaddress = "${sakuracloud_server.servers.*.ipaddress[count.index]}"
 }
 
 # 本来は以下のようにDNS(CNAME)と組み合わせて使う

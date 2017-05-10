@@ -52,5 +52,5 @@ resource sakuracloud_note "install_apache" {
 
 # サーバのグローバルIPを表示するためのアウトプット定義
 output server_ip {
-    value = "${sakuracloud_server.server.base_nw_ipaddress}"
+    value = "${sakuracloud_server.server.ipaddress}"
 }

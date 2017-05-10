@@ -21,7 +21,7 @@ resource sakuracloud_disk "agents" {
 resource sakuracloud_server "agents" {
     name = "${format("%s%02d" , var.agents_server_name , count.index+1)}"
     disks = ["${sakuracloud_disk.agents.*.id[count.index]}"]
-    additional_interfaces = ["${sakuracloud_switch.sw_consul.id}" , "${sakuracloud_switch.sw_nomad.id}" , "${sakuracloud_switch.sw_front.id}"]
+    additional_nics = ["${sakuracloud_switch.sw_consul.id}" , "${sakuracloud_switch.sw_nomad.id}" , "${sakuracloud_switch.sw_front.id}"]
     tags = ["@virtio-net-pci","consul","nomad"]
     core = "${var.agents_core}"
     memory = "${var.agents_memory}"
@@ -30,7 +30,7 @@ resource sakuracloud_server "agents" {
 
     connection {
       user = "root"
-      host = "${self.base_nw_ipaddress}"
+      host = "${self.ipaddress}"
       private_key = "${file("~/.ssh/id_rsa")}"
     }
 
@@ -54,5 +54,5 @@ resource sakuracloud_server "agents" {
 }
 
 output agents_global_ip {
-    value = ["${sakuracloud_server.agents.*.base_nw_ipaddress}"]
+    value = ["${sakuracloud_server.agents.*.ipaddress}"]
 }

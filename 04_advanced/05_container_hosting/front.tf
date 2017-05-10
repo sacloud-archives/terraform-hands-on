@@ -21,7 +21,7 @@ resource "sakuracloud_disk" "front" {
 resource "sakuracloud_server" "front" {
   name = "${format("%s%02d" , var.front_server_name , count.index+1)}"
   disks = ["${element(sakuracloud_disk.front.*.id , count.index)}"]
-  additional_interfaces = ["${sakuracloud_switch.sw_consul.id}" , "${sakuracloud_switch.sw_front.id}"]
+  additional_nics = ["${sakuracloud_switch.sw_consul.id}" , "${sakuracloud_switch.sw_front.id}"]
 #  packet_filter_ids = [ "${compact(split("," , var.packet_filter_ids))}" ]
   tags = ["@virtio-net-pci","consul","nginx"]
   core = "${var.front_core}"
@@ -31,7 +31,7 @@ resource "sakuracloud_server" "front" {
 
   connection {
     user = "root"
-    host = "${self.base_nw_ipaddress}"
+    host = "${self.ipaddress}"
     private_key = "${file("~/.ssh/id_rsa")}"
   }
 
@@ -62,6 +62,6 @@ resource "sakuracloud_server" "front" {
 }
 
 output front_global_ip {
-  value = ["${sakuracloud_server.front.*.base_nw_ipaddress}"]
+  value = ["${sakuracloud_server.front.*.ipaddress}"]
 }
 

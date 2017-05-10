@@ -17,7 +17,7 @@ resource sakuracloud_server "servers" {
         # 接続関連設定
         connection {
             user = "root"
-            host = "${self.base_nw_ipaddress}"
+            host = "${self.ipaddress}"
             private_key = "${file(var.key_path["private_key"])}"
         }
 

@@ -16,7 +16,7 @@ resource sakuracloud_dns_record "record" {
     dns_id = "${data.sakuracloud_dns.zone.id}"
     name = "*.${var.dns_record_name}"
     type = "A"
-    value = "${sakuracloud_server.front.*.base_nw_ipaddress[count.index]}"
+    value = "${sakuracloud_server.front.*.ipaddress[count.index]}"
 }
 
 # ドメインのネームサーバー情報(terraform outputコマンドでの出力用定義)
