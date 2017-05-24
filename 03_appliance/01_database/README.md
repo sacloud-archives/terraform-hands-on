@@ -25,8 +25,8 @@ PostgreSQLとMariaDBがサポートされています。
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - データベース](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/database/)
-- [Terraform for さくらのクラウド:リファレンス - スイッチ+ルータ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/internet/)
+- [Terraform for さくらのクラウド:リファレンス - データベース](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/database/)
+- [Terraform for さくらのクラウド:リファレンス - スイッチ+ルータ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/internet/)
 
 ---
 

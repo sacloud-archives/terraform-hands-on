@@ -33,8 +33,8 @@ DSR方式のロードバランサを提供します。
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - ロードバランサ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/load_balancer/)
-- [Terraform for さくらのクラウド:リファレンス - スイッチ+ルータ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/internet/)
+- [Terraform for さくらのクラウド:リファレンス - ロードバランサ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/load_balancer/)
+- [Terraform for さくらのクラウド:リファレンス - スイッチ+ルータ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/internet/)
 
 ---
 

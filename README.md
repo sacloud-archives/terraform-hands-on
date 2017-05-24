@@ -62,14 +62,14 @@ Terraform for さくらのクラウドを利用したハンズオンの資料で
 * Terraform 組み込みプロバイダ
     * [https://www.terraform.io/docs/providers/index.html](https://www.terraform.io/docs/providers/index.html)
 * Terraform for さくらのクラウド リファレンス
-    * [https://yamamoto-febc.github.io/terraform-provider-sakuracloud/](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/)
+    * [https://sacloud.github.io/terraform-provider-sakuracloud/](https://sacloud.github.io/terraform-provider-sakuracloud/)
 
 ### プロダクト
 
 * Terraform
     * [https://www.terraform.io/](https://www.terraform.io/)
 * Terraform for さくらのクラウド
-    * [https://github.com/yamamoto-febc/terraform-provider-sakuracloud](https://github.com/yamamoto-febc/terraform-provider-sakuracloud)
+    * [https://github.com/sacloud/terraform-provider-sakuracloud](https://github.com/sacloud/terraform-provider-sakuracloud)
 
 ### 紹介記事
 
@@ -92,7 +92,7 @@ Terraform for さくらのクラウドを利用したハンズオンの資料で
 ### 実例/サンプルなど
 
 * teratailのさくらのクラウド チュートリアルの構成を「Terraform for さくらのクラウド」で構築するためのtfファイル集
-    * [https://github.com/yamamoto-febc/teratail-sakuracloud-terraform-examples](https://github.com/yamamoto-febc/teratail-sakuracloud-terraform-examples)
+    * [https://github.com/sacloud/teratail-sakuracloud-terraform-examples](https://github.com/sacloud/teratail-sakuracloud-terraform-examples)
 
 ## License
 
@@ -102,4 +102,4 @@ Terraform for さくらのクラウドを利用したハンズオンの資料で
   
 ## Author
 
-  * Kazumichi Yamamoto ([@yamamoto-febc](https://github.com/yamamoto-febc))
+  * Kazumichi Yamamoto ([@yamamoto-febc](https://github.com/sacloud))

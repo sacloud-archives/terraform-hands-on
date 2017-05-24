@@ -30,7 +30,7 @@ variable target {
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - DNS](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/dns/)
+- [Terraform for さくらのクラウド:リファレンス - DNS](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/dns/)
 
 ---
 

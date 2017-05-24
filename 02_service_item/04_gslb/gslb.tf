@@ -3,7 +3,7 @@
 #----------------------------------------------------------
 
 # GSLBの定義
-#   - ドキュメント: https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/gslb/
+#   - ドキュメント: https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/gslb/
 resource "sakuracloud_gslb" "gslb" {
     name = "service_item04_gslb"
     # ヘルスチェック方法の定義

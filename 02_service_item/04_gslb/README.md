@@ -53,7 +53,7 @@ GSLB配下のサーバから応答されます。
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - GSLB](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/GSLB/)
+- [Terraform for さくらのクラウド:リファレンス - GSLB](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/GSLB/)
 
 ---
 

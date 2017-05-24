@@ -11,7 +11,7 @@ variable db_credentials {
 }
 
 # データベースの定義
-#    - ドキュメント: https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/database/
+#    - ドキュメント: https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/database/
 # 注: スイッチ or スイッチ+ルータが必須
 resource sakuracloud_database "db" {
     name = "db"

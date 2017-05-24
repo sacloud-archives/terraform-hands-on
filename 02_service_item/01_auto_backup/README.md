@@ -17,7 +17,7 @@
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - 自動バックアップ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/auto_backup/)
+- [Terraform for さくらのクラウド:リファレンス - 自動バックアップ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/auto_backup/)
 
 ---
 

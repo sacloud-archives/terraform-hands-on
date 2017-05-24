@@ -50,10 +50,10 @@ ssh root@[サーバのIPアドレス]
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - サーバ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/server/)
-- [Terraform for さくらのクラウド:リファレンス - ディスク](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/disk/)
-- [Terraform for さくらのクラウド:リファレンス - 公開鍵](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/ssh_key/)
-- [Terraform for さくらのクラウド:リファレンス - データソース](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/data_resource/)
+- [Terraform for さくらのクラウド:リファレンス - サーバ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/server/)
+- [Terraform for さくらのクラウド:リファレンス - ディスク](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/disk/)
+- [Terraform for さくらのクラウド:リファレンス - 公開鍵](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/ssh_key/)
+- [Terraform for さくらのクラウド:リファレンス - データソース](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/data_resource/)
 - [Terraform 組み込み関数](https://www.terraform.io/docs/configuration/interpolation.html#built-in-functions)
 
 ---

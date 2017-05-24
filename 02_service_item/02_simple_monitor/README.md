@@ -29,7 +29,7 @@ variable target_host {
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - シンプル監視](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/simple_monitor/)
+- [Terraform for さくらのクラウド:リファレンス - シンプル監視](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/simple_monitor/)
 
 ---
 

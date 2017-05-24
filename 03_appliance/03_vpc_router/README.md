@@ -25,7 +25,7 @@ VPC(Virtual Private Cloud)を構築するためのVPCルータを提供します
 
 ## 参考資料
 
-- [Terraform for さくらのクラウド:リファレンス - VPCルータ](https://yamamoto-febc.github.io/terraform-provider-sakuracloud/configuration/resources/vpc_router/)
+- [Terraform for さくらのクラウド:リファレンス - VPCルータ](https://sacloud.github.io/terraform-provider-sakuracloud/configuration/resources/vpc_router/)
 
 ---
 
