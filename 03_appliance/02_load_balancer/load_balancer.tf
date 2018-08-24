@@ -19,7 +19,7 @@ resource "sakuracloud_disk" "disks"{
     # パスワード
     password = "${var.password}"
     # ホスト名
-    hostname = "load_balancer_server${count.index}"
+    hostname = "load-balancer-server${count.index}"
 
     # SSH公開鍵を登録
     ssh_key_ids = ["${sakuracloud_ssh_key.key.id}"]
