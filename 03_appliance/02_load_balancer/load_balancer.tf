@@ -96,7 +96,7 @@ resource "sakuracloud_load_balancer" "lb" {
     # 接続するルータ+スイッチのID
     switch_id = "${sakuracloud_internet.router.switch_id}"
     # VRID(複数のロードバランサーを利用する場合、一意になる値を指定すること)
-    VRID = 1
+    vrid = 1
 
     # IPv4アドレス#1 / ネットマスク / ゲートウェイ
     ipaddress1 = "${sakuracloud_internet.router.ipaddresses[2]}"
